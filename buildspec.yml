@@ -10,5 +10,5 @@ phases:
         - echo build completed successfully...
 artifacts:
     files:
-      - target/apiproductos.jar
+      - target/*.jar
     discard-paths: yes
