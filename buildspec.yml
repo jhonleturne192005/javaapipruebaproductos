@@ -8,7 +8,6 @@ phases:
     post_build:
       commands:
         - echo build completed successfully...
-
 artifacts:
     files:
       - target/apiproductos.jar
