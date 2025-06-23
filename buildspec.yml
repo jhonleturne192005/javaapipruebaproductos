@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+    build:
+      commands:
+        - echo Entered into build phase....
+    post_build:
+      commands:
+        - echo build completed successfully...
+
+artifacts:
+    files:
+      - target/demo-0.0.1-SNAPSHOT.jar
+    discard-paths: yes
