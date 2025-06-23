@@ -85,6 +85,7 @@ public class ControllerProductos
     }
     
     
+    
     @GetMapping("/buscarid/{id}")
     public ResponseEntity<?> buscarProductoId(@PathVariable Long id)
     {
