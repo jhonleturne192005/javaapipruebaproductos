@@ -141,6 +141,11 @@ public class ControllerProductos
     
     
     
+    
+    
+    
+    
+    
     @PutMapping ("/actualizar")
     public ResponseEntity<?> actualizarProducto(@RequestBody ModelProductos modelproducto)
     {
