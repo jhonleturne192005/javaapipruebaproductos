@@ -10,5 +10,5 @@ phases:
 
 artifacts:
     files:
-      - target/demo-0.0.1-SNAPSHOT.jar
+      - target/apiproductos.jar
     discard-paths: yes
