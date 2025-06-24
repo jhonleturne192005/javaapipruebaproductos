@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class ControllerProductos
 {
+    
     @Autowired
     Sproductos sproductos;
     
