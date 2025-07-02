@@ -87,7 +87,7 @@ public class ControllerProductos
     
     
     
-    @GetMapping("/buscarid/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> buscarProductoId(@PathVariable Long id)
     {
         Map<String,Object> response=new HashMap();
@@ -113,31 +113,31 @@ public class ControllerProductos
         }
     }
     
-    @GetMapping("/buscarname/{name}")
-    public ResponseEntity<?> buscarProductoName(@PathVariable String name)
-    {
-        Map<String,Object> response=new HashMap();
-        try
-        {
-            if(name!="")
-            {
-                response.put(Messages.DATA, sproductos.BuscarNombreProducto(name));
-                return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK); 
-            }
-            else
-            {
-                response.put(Messages.ERROR_KEY, Messages.ERROR_DATOS_INCOMPLETOS);
-                return new ResponseEntity<Map<String,Object>>(response,HttpStatus.BAD_REQUEST);
-            }
-        }     
-        catch(Exception ex)
-        {
-            System.out.println("ERROR= "+ex.getMessage());
-            String error=ex.getMessage();
-            response.put(Messages.ERROR_KEY, Messages.ERROR_SISTEMA);
-            return new ResponseEntity<Map<String,Object>>(response,HttpStatus.BAD_REQUEST);
-        }
-    }
+//    @GetMapping("/buscarname/{name}")
+//    public ResponseEntity<?> buscarProductoName(@PathVariable String name)
+//    {
+//        Map<String,Object> response=new HashMap();
+//        try
+//        {
+//            if(name!="")
+//            {
+//                response.put(Messages.DATA, sproductos.BuscarNombreProducto(name));
+//                return new ResponseEntity<Map<String,Object>>(response,HttpStatus.OK); 
+//            }
+//            else
+//            {
+//                response.put(Messages.ERROR_KEY, Messages.ERROR_DATOS_INCOMPLETOS);
+//                return new ResponseEntity<Map<String,Object>>(response,HttpStatus.BAD_REQUEST);
+//            }
+//        }     
+//        catch(Exception ex)
+//        {
+//            System.out.println("ERROR= "+ex.getMessage());
+//            String error=ex.getMessage();
+//            response.put(Messages.ERROR_KEY, Messages.ERROR_SISTEMA);
+//            return new ResponseEntity<Map<String,Object>>(response,HttpStatus.BAD_REQUEST);
+//        }
+//    }
     
     
     
@@ -147,7 +147,7 @@ public class ControllerProductos
     
     
     
-    @PutMapping ("/actualizar")
+    @PutMapping ("/")
     public ResponseEntity<?> actualizarProducto(@RequestBody ModelProductos modelproducto)
     {
         Map<String,Object> response=new HashMap();
@@ -184,7 +184,7 @@ public class ControllerProductos
     }
 
     
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarProducto(@PathVariable Long id)
     {
         Map<String,Object> response=new HashMap();
